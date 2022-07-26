@@ -1,0 +1,62 @@
+/*
+    initialize css styles 
+
+    */
+body {
+    background-color: #a9bf7e;
+    font-family: sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+---------------
+*/
+.container {
+    background-color: #a1d0ea;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 1%;
+    width: 60%;
+    margin: auto;
+}
+
+.container div {
+    margin: 20px;
+    box-shadow: 0 10px #7fa5ba;
+    text-align: center;
+}
+.input {
+    background-color: #efefef;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#result {
+    background-color: #f0fbeb;
+    grid-column: 1/-1;
+    min-width: 200px;
+    min-height: 100px;
+   
+}
+#C {
+    background-color: #fda0aa;
+    font-weight:100;
+    color: #696274;
+}
+.green {
+    background-color: #efff94;
+    
+    
+}
+.green h1 {
+    font-weight:100;
+   color: #9faf82;
+}
