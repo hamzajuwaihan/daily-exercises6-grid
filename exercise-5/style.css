@@ -1,5 +1,6 @@
 body {
     background-color: #efefef;
+    font-family: sans-serif;
 }
 
 * {
@@ -158,6 +159,7 @@ a>div>p {
     display: flex;
     width: 90%;
     justify-content: space-between;
+    margin-top: 10px;
 
 }
 #list-1 {

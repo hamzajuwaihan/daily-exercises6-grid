@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+}
+#container {
+    display: grid;
+    width: 90%;
+    height: 96vh;
+    grid-template: repeat(6,1fr) 2fr/ repeat(60,1fr);
+    margin: auto;
+    gap: 10px;
+}
+
+#container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 20px;
+}
+.first-row {
+    color: white;
+    background-color: #46b2fd;
+    grid-column: 1/61;
+}
+.second-row {
+    grid-column: span 30;
+    color: white;
+    background-color: #46b2fd;
+}
+
+.third-row {
+    grid-column: span 20;
+    color: white;
+    background-color: #46b2fd;
+}
+.fourth-row {
+    grid-column: span 15;
+    color: white;
+    background-color: #46b2fd;
+}
+
+.fifth-row {
+    grid-column: span calc(60/5);
+    color: white;
+    background-color: #46b2fd;
+}
+.sexth-row {
+    grid-column: span calc(60/6);
+    color: white;
+    background-color: #46b2fd;
+
+}
+.seventh-row {
+    grid-column: span 60;
+    color: white;
+    background-color: #46b2fd;
+    flex-direction: column ;
+}
