@@ -18,11 +18,10 @@ body {
 .container {
     background-color: #a1d0ea;
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     border-radius: 1%;
-    width: 60%;
+    width: 40%;
     margin: auto;
 }
 
