@@ -32,6 +32,9 @@
       let fnum,
         snum,
         operation = null;
+      let calc = null;
+      let equation,
+        output = null;
       for (let index = 0; index < 10; index++) {
         document
           .getElementById(`num-${index}`)
@@ -74,34 +77,37 @@
         });
       document.getElementById("equal").addEventListener("click", function () {
         snum = result.innerHTML;
-        
-        let equation,
-          output = null;
+
         switch (operation) {
           case "+":
-            equation = `${fnum} ${operation} ${snum} = `;
-            output = equation + (Number(fnum) + Number(snum));
+            
+            calc = Number(fnum) + Number(snum);
+            output =  calc;
             result.innerHTML = output;
             output = "";
             break;
           case "-":
-            equation = `${fnum} ${operation} ${snum} = `;
-            output = equation + (Number(fnum) + Number(snum));
+            
+            calc = Number(fnum) - Number(snum);
+            output =  calc;
             result.innerHTML = output;
-            output = ''
+            output = "";
 
             break;
           case "*":
-            equation = `${fnum} ${operation} ${snum} = `;
-            output = equation + (Number(fnum) + Number(snum));
+            
+            calc = Number(fnum) * Number(snum);
+            output =  calc;
+
             result.innerHTML = output;
-            output = ''
+            output = "";
             break;
           case "/":
-            equation = `${fnum} ${operation} ${snum} = `;
-            output = equation + (Number(fnum) + Number(snum));
+            
+            calc = Number(fnum) / Number(snum);
+            output =  calc;
             result.innerHTML = output;
-            output = ''
+            
             break;
         }
       });
