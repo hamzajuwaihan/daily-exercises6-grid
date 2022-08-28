@@ -59,3 +59,10 @@ h1 {
     font-weight:100;
    color: #9faf82;
 }
+#result {
+    display: flex;
+    padding: 12px;
+    justify-content: start;
+    font-size: 38px;
+
+}

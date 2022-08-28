@@ -71,6 +71,11 @@ body {
     color: white;
     padding-left: 20px;
     position: relative;
+    background-image: linear-gradient(45deg, transparent 20%, white 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 20%, white 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 75%, white 80%, transparent 0),
+    radial-gradient(white 2px, transparent 0);
+background-size: 30px 30px, 30px 30px;
 }
 
 #orange-extra:before {
@@ -84,6 +89,7 @@ body {
     border: solid 15px transparent;
     border-right-color: #3db8e2;
     z-index: 1;
+    
 }
 
 .orange {
@@ -97,6 +103,11 @@ body {
     color: white;
     position: relative;
     padding-left: 20px;
+    background-image: linear-gradient(45deg, transparent 20%, white 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 20%, white 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 75%, white 80%, transparent 0),
+    radial-gradient(white 2px, transparent 0);
+background-size: 30px 30px, 30px 30px;
 }
 
 #smart-life:after {

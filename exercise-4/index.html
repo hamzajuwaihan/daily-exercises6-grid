@@ -1,31 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Exercise #4</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div id="result"></div>
-        <div class="input"><h1>1</h1></div>
-        <div class="input"><h1>2</h1></div>
-        <div class="input"><h1>3</h1></div>
-        <div class="green"><h1>+</h1></div>
-        <div class="input"><h1>4</h1></div>
-        <div class="input"><h1>5</h1></div>
-        <div class="input"><h1>6</h1></div>
-        <div class="green"><h1>-</h1></div>
-        <div class="input"><h1>7</h1></div>
-        <div class="input"><h1>8</h1></div>
-        <div class="input"><h1>9</h1></div>
-        <div class="green"><h1>*</h1></div>
-        <div  id="C"><h1>C</h1></div>
-        <div class="input"><h1>0</h1></div>
-        <div class="input"> <h1>=</h1></div>
-        <div class="green"><h1>/</h1></div>
+      <div id="result"></div>
+      <div class="input" id="num-1"><h1>1</h1></div>
+      <div class="input" id="num-2"><h1>2</h1></div>
+      <div class="input" id="num-3"><h1>3</h1></div>
+      <div class="green" id="plus"><h1>+</h1></div>
+      <div class="input" id="num-4"><h1>4</h1></div>
+      <div class="input" id="num-5"><h1>5</h1></div>
+      <div class="input" id="num-6"><h1>6</h1></div>
+      <div class="green" id="minus"><h1>-</h1></div>
+      <div class="input" id="num-7"><h1>7</h1></div>
+      <div class="input" id="num-8"><h1>8</h1></div>
+      <div class="input" id="num-9"><h1>9</h1></div>
+      <div class="green" id="multiply"><h1>*</h1></div>
+      <div id="C"><h1>C</h1></div>
+      <div class="input" id="num-0"><h1>0</h1></div>
+      <div class="input" id="equal"><h1>=</h1></div>
+      <div class="green" id="division"><h1>/</h1></div>
     </div>
-</body>
+    <script>
+      let result = document.getElementById(`result`);
+      let fnum,
+        snum,
+        operation = null;
+      for (let index = 0; index < 10; index++) {
+        document
+          .getElementById(`num-${index}`)
+          .addEventListener("click", function () {
+            result.innerHTML += document.getElementById(
+              `num-${index}`
+            ).textContent;
+          });
+      }
+      document.getElementById("C").addEventListener("click", function () {
+        result.innerHTML = "";
+      });
+      document.getElementById("plus").addEventListener("click", function (e) {
+        fnum = result.innerHTML;
+        console.log(fnum);
+        result.innerHTML = "";
+        operation = "+";
+      });
+      document.getElementById("minus").addEventListener("click", function (e) {
+        fnum = result.innerHTML;
+        console.log(fnum);
+        result.innerHTML = "";
+        operation = "-";
+      });
+      document
+        .getElementById("multiply")
+        .addEventListener("click", function (e) {
+          fnum = result.innerHTML;
+          console.log(fnum);
+          result.innerHTML = "";
+          operation = "*";
+        });
+      document
+        .getElementById("division")
+        .addEventListener("click", function (e) {
+          fnum = result.innerHTML;
+          console.log(fnum);
+          result.innerHTML = "";
+          operation = "/";
+        });
+      document.getElementById("equal").addEventListener("click", function () {
+        snum = result.innerHTML;
+        
+        let equation,
+          output = null;
+        switch (operation) {
+          case "+":
+            equation = `${fnum} ${operation} ${snum} = `;
+            output = equation + (Number(fnum) + Number(snum));
+            result.innerHTML = output;
+            output = "";
+            break;
+          case "-":
+            equation = `${fnum} ${operation} ${snum} = `;
+            output = equation + (Number(fnum) + Number(snum));
+            result.innerHTML = output;
+            output = ''
+
+            break;
+          case "*":
+            equation = `${fnum} ${operation} ${snum} = `;
+            output = equation + (Number(fnum) + Number(snum));
+            result.innerHTML = output;
+            output = ''
+            break;
+          case "/":
+            equation = `${fnum} ${operation} ${snum} = `;
+            output = equation + (Number(fnum) + Number(snum));
+            result.innerHTML = output;
+            output = ''
+            break;
+        }
+      });
+    </script>
+  </body>
 </html>
